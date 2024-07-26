@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=egde, initial-scale=1.0">
     <title>CSS 문서 사용하기</title>
+    <style>
+        p{
+            color: orange;
+        }
+      </style> 
+      <!-- 
+       인라인 스타일은 우선적으로 적용 된다 .
+       인라인 스타일이 아닌 경우, 나중에 쓰여진 선언문이 적용된다.
+       -->
 </head>
 <body>
-  <style>
-    p{
-        color: orange;
-    }
-  </style> <!-- 인라인 스타일은 우선적으로 적용 된다 . -->
+    <link href="19-css문서사용하기.css" rel="stylesheet">
     <p style="color: red; opacity: 1;">스타일 적용 실험: 색깔만 바꿔보자</p>
     <p>스타일 적용 실험: 색깔만 바꿔보자</p>
     <p>스타일 적용 실험: 색깔만 바꿔보자</p>
