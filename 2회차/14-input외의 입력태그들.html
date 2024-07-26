@@ -1,0 +1,39 @@
+<!--
+- select 선택지 제공 -
+ex) <select>
+    <option>커피</option>
+    <option>셍수</option>
+    <option>쥬스</option>
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>input 외 입력 태그들</title>
+    </head>
+    <body>
+        <fieldset> <!-- fildset : 영역 묶기, legend : 영역 제목 표시 -->
+            <legend>음료주문</legend>
+        <h1>음료를 고르세요.</h1>
+        <select> <!-- <select multiple> : 여러 개를 한번에 보기-->
+            <option value="coffee">커피</option>
+            <option value="coke">콜라</option>
+            <option value="juice" selected>쥬스</option>
+            <!-- selected : 먼저 띄우기 -->
+        </select>
+<hr>
+        <h1>기타 음료를 원한다면 자유롭게 써주세요.</h1> 
+        <!-- textarea : 공간이 넓은 text -->
+        <textarea cols="30" rows="10"></textarea>
+        <!--  cols : 가로   rows : 세로  -->
+    </fieldset>
+<hr>
+        <h1>우리의 준비 상태는 아래와 같습니다.</h1>
+        <progress max="100" value="60"></progress>
+<hr>
+        <h1>추가 용무가 있으면 호출해 주세요.</h1>
+        <button>호출</button>
+        <input type="button" value="호출">
+
+    </body>
+</html>

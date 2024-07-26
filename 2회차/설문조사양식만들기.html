@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>설문조사 양식</title>
+</head>
+<body>
+    <header>
+    <h1>설문조사 양식</h1>
+    <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    </header>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>개인정보</legend>
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="본명을 입력하세요.">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="gender" name="gender">성별</label>
+            &nbsp;&nbsp;
+            <label for="gender" name="gender">남</label>
+            <input type="radio" id="man" name="gender">
+            <label for="gender" name="gender">여</label>
+            <input type="radio" id="woman" name="gender">
+            <br>
+            <label for="email">이메일</label>
+            <input type="email" id="email" placeholder="이메일을 입력하세요.">
+        </fieldset>
+        <fieldset>
+            <legend>설문</legend>
+            <p>연령대가 어떻게 되십니까?</p>
+            <input type="radio" id="teen" name="age">
+            <label for="teen">10대</label>
+            <input type="radio" id="twenty" name="age">
+            <label for="twenty">20대</label>
+            <input type="radio" id="thirty" name="age">
+            <label for="thirty">30대</label>
+            <input type="radio" id="fourty" name="age">
+            <label for="fourty">40대</label>
+            <input type="radio" id="fifty" name="age">
+            <label for="fifty">50대</label>
+            <input type="radio" id="other" name="age">
+            <label for="other">그 외</label>
+
+            <p>전공이 무엇입니까?</p>
+            <select>
+                <option>기획.전략</option>
+                <option>의료</option>
+                <option>교육</option>
+                <option>건설.건축</option>
+                <option>마케팅.홍보.조사</option>
+                <option>회계.세무.재무</option>
+                <option>서비스</option>
+                <option>생산</option>
+                <option>디자인</option>
+            </select>
+            <p>아르바이트 경험이 있습니다? 있으면 모두 고르세요.</p>
+            <input type="checkbox">요식업</input>
+            <input type="checkbox">서비스업</input>
+            <input type="checkbox">행정업</input>
+            <input type="checkbox">건설업</input>
+            <br>
+            <input type="checkbox">운송업</input>
+            <input type="checkbox">생산업</input>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="text">기타</label>
+            <input type="text">
+
+        </fieldset>
+        <fieldset>
+            <legend>기타 의견</legend>
+            <textarea cols="100" rows="5"></textarea>
+        </fieldset>
+        <input type="submit">
+    </form>
+    <hr>
+    <footer>
+        <P>입력하느라 수고하셨습니다.</P>
+    </footer>
+
+</body>
+</html>
