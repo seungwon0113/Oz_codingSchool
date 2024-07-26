@@ -8,7 +8,10 @@ git remote add origin ""
 git add .
 
 # 커밋메세지와 함께 올리기
-git commit -m ""
+git commit -m "커밋메세지"
 
 # 연결 된 원격 저장소에 최종 업로드
 git push origin main
+
+# 저장소에서 가져오기
+git pull origin main
