@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서의 흐름</title>
+    <style>
+        .container{
+            height: 400%;
+            border: 1px solid black;
+        }
+        #first{
+            float: right;
+        }
+        #second{
+            float: left;
+        }
+        p{
+            clear: both;
+        } /* clear: float을 위한 명령어 깔끔하게 정리 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="first"
+        src="../1회차/images/다운로드.jpeg"
+        height="100">
+        <img id="second"
+        src="../1회차/images/다운로드.jpeg"
+        height="100">
+        <p>
+            일본의 한 도시인 오키나와의 다리 사진이다.
+        </p>
+    </div>
+</body>
+</html>

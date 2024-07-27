@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사 클래스 & 의사 요소</title>
+    <style>
+        /* 의사 클래스 */
+        .menu{
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .menu > li{
+            display: inline-block;
+            text-align: center;
+        }
+        li > a{
+            display: inline-block;
+            width: 80px;
+            padding: 10px;
+            text-decoration: none;
+            /* text-decoration: 글 밑에 줄 없애기 */
+        }
+        a:hover{ /* hover: 마우스를 얹었을 때 */
+            color: white;
+            background-color: gray;
+        }
+        a:active{ /* active: 마우스를 꾹 누를 때 */
+            color: white;
+            background-color: red;
+        }
+        li:nth-child(2n){  /* :nth-child() : 형제중에 선택 하기 */
+            font-size: 20px;
+        }
+
+        /* 의사 요소 : 일부분만 선택 한다. */
+        a::first-letter{
+            color: green;
+        }
+        a::after{
+            /* ::after or before{"내용"}: 뒤 or 앞에 컨텐츠 추가 */
+            content: "보기";
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">사진</a></li>
+        <li><a href="#">뉴스</a></li>
+        <li><a href="#">증권</a></li>
+        <li><a href="#">지도</a></li>
+    </ul>
+</body>
+</html>

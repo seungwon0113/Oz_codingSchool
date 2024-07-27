@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 더 알아보기</title>
+    <style>
+        [alt]{
+            border: 5px dashed red;
+            /* 
+            [] 중괄호: 속성 선택자, id, class 말고도 속성으로 선택가능
+            */
+        }
+        [width *= "3"]{
+            border: 5px dashed green;
+            /*
+            기호와 함께 사용하는 속성 선택자
+            * : 값의 포함 여부
+            ^ : 값의 시작 여부
+            $ : 값의 끝 여부
+            */
+        }
+        body p{
+            color: brown;
+        }
+        body em{
+            /* em> : em 옆에 > 기호는 자식선택자로 em에 표시 X
+            */
+            color: pink;
+        }
+        #sam + p{
+            color: purple;
+            /* + : 바로 뒤의 형제 태크 */
+        }
+    </style>
+</head>
+<body>
+    <img src="../1회차/images/다운로드.jpeg" alt="일본">
+    <img src="../1회차/images/다운로드.jpeg" width="300">
+    <img src="../1회차/images/다운로드.jpeg" width="300" id="sam">
+    <p>오키나와는 최고의 관광지 이며 인기많은 곳 입니다.</p>
+    <p>누구나 한번쯤은 가봤을 일본.</p>
+    <p>언제나 <em>사람들이 북적이며</em> 인기가 많습니다.</p>
+    <p>100년이 넘어도 최고의 관광지 입니다.</p>
+</body>
+</html>
