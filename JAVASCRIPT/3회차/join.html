@@ -10,13 +10,13 @@
     <div id="container">
         <form id="form" action="#">
             <table class="table">
-                <tr>
+                <tr class="userId">
                     <th>아이디</th>
                     <td>
-                        <input name="id" placeholder="아이디" autocomplete="off" required>
+                        <input name="userId" placeholder="아이디" autocomplete="off" required>
                     </td>
                 </tr>
-                <tr>
+                <tr class="pw1">
                     <th>비밀번호</th>
                     <td>
                         <input type="password" name="pw1" placeholder="비밀번호" required>
@@ -65,7 +65,13 @@
                 <tr>
                     <th>이메일</th>
                     <td>
-                        <input title="정확한 메일 주소를 작성해주세요" type="email" name="email" required>
+                        <input title="정확한 메일 주소를 작성해주세요" type="email" name="email" required>@
+                        <select>
+                            <option value="네이버">naver.com</option>
+                            <option value="지메일">gmail.com</option>
+                            <option value="다음">daum.com</option>
+                            <option value="네이트">nate.com</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
