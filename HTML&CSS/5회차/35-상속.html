@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속</title>
+    <style>
+        .list{
+            /* 상속 되는 애 */
+            color: red;
+            font-style: italic;
+            font-weight: 900px;
+
+            /* 상석 안되는 애*/
+            border: 3px dashed green;
+            padding: 0;
+        }
+        ul{
+            border: inherit;
+        }
+        li:nth-child(3){
+            color: initial;
+            font-style: initial;
+            font-weight: initial;
+        }
+    </style>
+</head>
+<body>
+    <h2>서울 마라톤 대회</h2>
+    <div class="list">
+        <ul>
+            <li>서울에 마라톤</li>
+            <li>대전에 마라톤</li>
+            <li>부산에 마라톤</li>
+            <li>대구에 마라톤</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
