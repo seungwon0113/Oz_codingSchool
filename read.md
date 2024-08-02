@@ -16,5 +16,11 @@ git push origin main
 # 저장소에서 가져오기
 git pull origin main
 
-# 
-g
+# git이 인식했는지 확인 명령어
+git status
+
+# commit 내역
+git log
+
+# history
+터미널 명령어 내역 확인
