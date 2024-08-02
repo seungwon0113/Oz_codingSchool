@@ -15,3 +15,6 @@ git push origin main
 
 # 저장소에서 가져오기
 git pull origin main
+
+# 
+g
