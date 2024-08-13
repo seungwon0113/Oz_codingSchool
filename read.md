@@ -10,6 +10,9 @@ git add .
 # 커밋메세지와 함께 올리기
 git commit -m "커밋메세지"
 
+# 모든사항을 add 하고 커밋메세지와 함께 올리기
+git commit -am "커밋메세지"
+
 # 연결 된 원격 저장소에 최종 업로드
 git push origin main
 
@@ -19,7 +22,7 @@ git pull origin main
 # git이 인식했는지 확인 명령어
 git status
 
-# commit 내역
+# commit 내역 확인
 git log
 
 # history
