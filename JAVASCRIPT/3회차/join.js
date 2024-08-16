@@ -20,7 +20,7 @@ form.addEventListener("submit", function(event){
     console.log(userId, userpw1, userpw2, userName,userPhone,
         userPosition, userGender, userEmail, userIntro)
         
-        if(userId.length < 10){
+        if(userId.length < 8){
             alert("아이디가 너무 짧습니다. 10자 이상 입력해주세요.")
             return
         }

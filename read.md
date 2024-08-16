@@ -27,3 +27,6 @@ git log
 
 # history
 터미널 명령어 내역 확인
+
+# reset을 이용한 커밋 되돌리기
+git reset --hard [해시값]
