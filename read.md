@@ -24,6 +24,7 @@ git status
 
 # commit 내역 확인
 git log
+git log --oneline = 더욱 상세하게 확인
 
 # history
 터미널 명령어 내역 확인
