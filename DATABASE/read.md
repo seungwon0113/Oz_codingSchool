@@ -12,7 +12,10 @@
 - CREATE USER 'username'@'localhost' IDENTIFIED BY 'user_password'; : 유저 생성
 - SET PASSWORD FOR 'username'@'%' = '신규비밀번호'; : 사용자 비밀번호 변경
 
-## < 권한 확인 >
+## < 권한 부여 및 확인 >
+# 로컬호스트 경로의 username이라는 유저에 .(전체권한)을 부여하겠다.
+- GRANT ALL PRIVILEGES ON . TO 'username'@'localhost';
+
 - SHOW GRANTS FOR 'username'@'localhost';
 - SHOW GRANTS; : 현재 로그인한 유저의 권환 확
 
