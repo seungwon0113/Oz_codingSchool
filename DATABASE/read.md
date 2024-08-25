@@ -21,3 +21,5 @@
 
 ## < 사용자 삭제 >
 - DROP USER 'username'@'localhost';
+
+## 쿼리 최적화 (인덱스 : 듀이 십진분류법)
