@@ -68,3 +68,29 @@ SELECT title, sales FROM books WHERE sales < (SELECT AVG(sales) FROM books);
 -- 5) 가장 많이 출판된 저자의 책들 중 최근에 출판된 책을 조회
 SELECT author, title FROM books WHERE author = (SELECT author FROM books GROUP BY author ORDER BY COUNT(*) DESC LIMIT 1);
 SELECT author FROM books GROUP BY author ORDER BY COUNT(*) DESC LIMIT 1; -- 가장 많이 출판된 저자
+
+-- # 데이터 수정 및 관리
+-- 1) 특정 책의 가격을 업데이트
+UPDATE Books SET title = '제목 업데이트' WHERE author = '최태성의 저'
+
+-- 2) 판매지수가 가장 낮은 책을 데이터베이스에서 삭제
+DELETE FROM books WHERE sales = (SELECT MIN(sales)) FROM books
+
+-- 3) 틀정 출판사가 출판한 모든 책의 평점을 1정 증가
+UPDATE books SET rating = rating + 1 WHERE publisher = '웅진하우스'
+
+-- # 데이터 분석 예제
+-- 1) 저자별 평균 평점 및 판매지수를 분석하여 인기 있는 저자를 확인
+SELECT author, AVG(rating), AVG(sales) FROM books GROUP BY author ORDER BY AVG(rating) DESC, AVG(sales) DESC;
+
+-- 2) 출판일에 따른 책 가격의 변동 추세를 분석
+SELECT publishing, AVG(price) FROM books GROUP BY publishing ORDER BY publishing ASC;
+
+-- 3) 출판사별 출간된 책의 수와 평균 리뷰 수를 비교 분석
+SELECT publisher, COUNT(*) AS book_count, SUM(review) AS review_sum FROM books GROUP BY publisher ORDER BY book_count DESC;
+
+-- 4) 국내도서 랭킹과 판매지수의 상관 관계를 분석
+SELECT ranking, AVG(sales) FROM books GROUP BY ranking;
+
+-- 5) 가격 대비 리뷰 수와 평점의 관계를 분석(가성비 좋은 책찾기)
+SELECT price, AVG(review), AVG(rating) FROM books GROUP BY price;
