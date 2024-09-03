@@ -4,6 +4,7 @@ from db import db
 from models import User, Board
 from routes.board import board_blp
 from routes.user import user_blp
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # 메모리 영역에서 �
 
 # 앱 객체 전달
 db.init_app(app)
-
+migrate = Migrate(app, db)
 # bluepring 설정 및 등록
 app.config["API_TITLE"] = "My API"
 app.config["API_VERSION"] = "v1"
