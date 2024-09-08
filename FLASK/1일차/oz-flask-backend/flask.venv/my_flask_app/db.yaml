@@ -2,3 +2,5 @@ mysql_host: 'localhost'
 mysql_user: 'root'
 mysql_password: 'seungwon0113'
 mysql_db: 'blog'
+
+# pip install pyyaml
