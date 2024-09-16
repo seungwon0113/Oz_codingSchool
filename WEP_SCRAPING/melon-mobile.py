@@ -67,7 +67,7 @@ def scann():
             print(f"가수 : {artist_text}")
             print()
 scann()
-#driver.quit()
+driver.quit()
 
 
 # 출력하기
