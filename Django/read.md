@@ -1,6 +1,9 @@
 # Django
+    
 **Python Django**
-
+    
+    * poetry shell : 가상환경 실행
+    
 - **특징 및 대표적인 모듈:**
     - Django는 Python 기반의 웹 프레임워크로, 고수준의 웹 개발을 위한 기능을 포괄적으로 제공합니다.
     - 대표적인 모듈로는 ORM(객체 관계 매핑), MTV(Model-Template-View) 아키텍처, Django REST framework(RESTful API 개발) 등이 있습니다.

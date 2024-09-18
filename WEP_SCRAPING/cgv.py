@@ -8,4 +8,23 @@ req = requests.get(url, headers=header_user)
 html = req.text
 soup = BeautifulSoup(html, "html.parser")
 
-list_all = soup.find_all()
+view = soup.select(".sect-movie-chart ol > li")
+for i in view:
+    ranking = i.select_one(".rank")
+    title = i.select_one(".title")
+    rate = i.select_one(".percent")
+    info = i.select_one(".txt-info")
+    dday = i.select_one(".dday") # d-day
+
+    if not dday and ranking and title and rate and info: # dday 제외와 text
+        ranking_text = ranking.text.strip()
+        title_text = title.text.strip()
+        rate_text = rate.text.strip()
+        info_text = info.text.strip().replace("개봉", "").replace("재","").strip() 
+        # replace() : <span>개봉</span>, <span>재개봉</span> 지우기
+        
+        print(f"순위 : {ranking_text}")
+        print(f"제목 : {title_text}")
+        print(f"예매률 : {rate_text}")
+        print(f"개봉일자 : {info_text}")
+        print()
